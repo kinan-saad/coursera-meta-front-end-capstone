@@ -335,6 +335,222 @@ footer section ul li a {
   color: #333;
 }
 
+/* Container */
+.reservation-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.reservation-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Form */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reservation-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #444;
+}
+
+.reservation-form input,
+.reservation-form select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+  border-color: #333;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+/* Date inline overlay (native picker proxy) */
+.overlay-input {
+  margin-top: 10px;
+}
+
+/* Submit */
+.submit-btn {
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #333;
+}
+
+/* ===== Time Modal (3 columns) ===== */
+.time-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+
+.time-modal {
+  width: min(520px, 92vw);
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+}
+
+.time-modal-title {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.time-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+  gap: 0.75rem;
+}
+
+.time-column {
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 6px;
+  background: #fafafa;
+}
+
+/* Make the lists feel tappable */
+.time-item {
+  width: 100%;
+  padding: 10px 8px;
+  margin: 3px 0;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.98rem;
+}
+
+.time-item:hover {
+  background: #eee;
+}
+
+.time-item.selected {
+  background: #111;
+  color: #fff;
+}
+
+/* AM/PM column can be tighter */
+.time-column.period .time-item {
+  padding: 12px 8px;
+  font-weight: 600;
+}
+
+/* Modal actions */
+.time-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f6f6f6;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.ghost {
+  background: #fff;
+}
+
+.btn.confirm {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.btn.confirm:hover {
+  background: #333;
+  border-color: #333;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .reservation-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .reservation-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .reservation-form {
+    gap: 1rem;
+  }
+
+  .reservation-form input,
+  .reservation-form select {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .time-modal {
+    width: 95vw;
+    padding: 0.75rem;
+  }
+
+  .time-column {
+    max-height: 200px;
+  }
+
+  .time-item {
+    padding: 10px 6px;
+  }
+
+  .btn {
+    padding: 9px 12px;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
@@ -365,4 +581,34 @@ footer section ul li a {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .reservation-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .reservation-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .reservation-form {
+    gap: 1rem;
+  }
+
+  .reservation-form input,
+  .reservation-form select {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .time-overlay {
+    max-height: 150px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
 }
+
