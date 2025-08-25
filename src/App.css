@@ -550,6 +550,41 @@ footer section ul li a {
   }
 }
 
+.confirmed-booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  text-align: center;
+  padding: 2rem;
+  background: #fdfdfd;
+}
+
+.confirmed-booking h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.confirmed-booking p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.confirmed-booking::before {
+  content: "✔";
+  display: block;
+  font-size: 4rem;
+  color: #4caf50;
+  margin-bottom: 1.5rem;
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
